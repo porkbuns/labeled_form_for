@@ -6,11 +6,11 @@ require 'labeled_form_for/version'
 Gem::Specification.new do |spec|
   spec.name          = "labeled_form_for"
   spec.version       = LabeledFormFor::VERSION
-  spec.authors       = ["Hsiu-Fan Wang"]
+  spec.authors       = ["Matt McCray", "Hsiu-Fan Wang"]
   spec.email         = ["hfwang@porkbuns.net"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{Automatically creates field labels, and surrounds the form markup using Data-Definition Lists.}
+  spec.description   = %q{Automatically creates field labels, and surrounds the form markup using Data-Definition Lists.}
+  spec.homepage      = "http://mattmccray.com/svn/rails/plugins/labeled_form_builder"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
