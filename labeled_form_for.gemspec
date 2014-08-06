@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "http://mattmccray.com/svn/rails/plugins/labeled_form_builder"
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files -z`.split("\x0")
+  spec.files         = [".gitignore", "Gemfile", "INSTALL", "LICENSE", "README", "Rakefile", "labeled_form_for.gemspec", "lib/labeled_form_for.rb", "lib/labeled_form_for/labeled_form_builder.rb", "lib/labeled_form_for/labeled_form_helper.rb", "lib/labeled_form_for/version.rb"]
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
