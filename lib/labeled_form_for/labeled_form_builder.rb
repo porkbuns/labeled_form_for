@@ -1,6 +1,6 @@
 class LabeledFormFor::LabeledFormBuilder < ActionView::Helpers::FormBuilder
 
-   ((field_helpers - %w(check_box radio_button hidden_field)) + %w(datetime_select date_select)).each do |selector|
+   ((field_helpers - [:check_box, :radio_button, :hidden_field]) + [:datetime_select, :date_select]).each do |selector|
     src = <<-END_SRC
     def #{selector}(field, options = {})
         field_label, info, example = get_label(field, options)
@@ -10,7 +10,7 @@ class LabeledFormFor::LabeledFormBuilder < ActionView::Helpers::FormBuilder
     class_eval src, __FILE__, __LINE__
   end
 
-  def select( field, choices, options = {}, html_options = {})
+  def select(field, choices, options = {}, html_options = {})
     field_label, info, example = get_label(field, options)
     field_to_html(field_label, field, super, get_errors(field), false, info, example, options)
   end
